@@ -54,13 +54,13 @@ public class Calculator : MonoBehaviour
         float sqrDistance = (lhs.location - rhs.location).sqrMagnitude;
         float distance = Mathf.Sqrt(sqrDistance);
 
-        // µÎ ¿øÀÌ °ãÄ¡Ä¡ ¾ÊÀ½
+        // ë‘ ì›ì´ ê²¹ì¹˜ì¹˜ ì•ŠìŒ
         if (distance >= lhs.radius + rhs.radius)
         {
             return 0f;
         }
 
-        // Å« ¿ø ¾È¿¡ ÀÛÀº ¿øÀÌ Æ÷ÇÔµÊ
+        // í° ì› ì•ˆì— ì‘ì€ ì›ì´ í¬í•¨ë¨
         if (lhs.radius >= distance + rhs.radius)
         {
             rhsRadian = Mathf.PI * 2f;
@@ -86,13 +86,13 @@ public class Calculator : MonoBehaviour
         lhsRadian = halfCetaB * 2f;
         rhsRadian = halfCetaC * 2f;
 
-        float s = (a + b + c) / 2f;   // Çì·ĞÀÇ °ø½Ä
+        float s = (a + b + c) / 2f;   // í—¤ë¡ ì˜ ê³µì‹
 
-        // µÎ ºÎÃ¤²ÃÀÇ ³ĞÀÌÀÇ ÇÕ - »ç°¢ÇüÀÇ ³ĞÀÌ
+        // ë‘ ë¶€ì±„ê¼´ì˜ ë„“ì´ì˜ í•© - ì‚¬ê°í˜•ì˜ ë„“ì´
         return squareB * halfCetaC + squareC * halfCetaB - Mathf.Sqrt(s * (s - a) * (s - b) * (s - c)) * 2f;
 
-        // ¶óµğ¾È ±âÁØ ºÎÃ¤²ÃÀÇ ³ĞÀÌ °ø½Ä : r * r * ceta / 2
-        // r    : ¹İÁö¸§
-        // ceta : ¶óµğ¾È °¢
+        // ë¼ë””ì•ˆ ê¸°ì¤€ ë¶€ì±„ê¼´ì˜ ë„“ì´ ê³µì‹ : r * r * ceta / 2
+        // r    : ë°˜ì§€ë¦„
+        // ceta : ë¼ë””ì•ˆ ê°
     }
 }
