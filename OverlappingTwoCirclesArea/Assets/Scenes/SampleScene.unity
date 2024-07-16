@@ -845,8 +845,8 @@ MonoBehaviour:
   lineRenderer: {fileID: 1416175226}
   repeat: 180
   circle:
-    location: {x: 2, y: 0}
-    radius: 2
+    location: {x: 4, y: 0}
+    radius: 4
   xField: {fileID: 0}
   yField: {fileID: 0}
   radiusField: {fileID: 0}
@@ -2175,7 +2175,7 @@ MonoBehaviour:
   lineRenderer: {fileID: 493446232}
   repeat: 180
   circle:
-    location: {x: -2, y: 0}
+    location: {x: -2, y: -1.5}
     radius: 3
   xField: {fileID: 0}
   yField: {fileID: 0}
