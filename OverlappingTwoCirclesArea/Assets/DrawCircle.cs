@@ -1,3 +1,5 @@
+using System.Linq;
+using TMPro;
 using UnityEngine;
 
 [System.Serializable]
@@ -13,15 +15,79 @@ public class DrawCircle : MonoBehaviour
     [Range(3, 360)] public int repeat = 180;
     public Circle circle = new()
     {
+        location = Vector2.zero,
         radius = 1f
     };
 
+    [Header("UI")]
+    public TMP_InputField xField;
+    public TMP_InputField yField;
+    public TMP_InputField radiusField;
+
     private void Awake()
     {
-        if (lineRenderer == null)
+        if (!lineRenderer)
         {
             lineRenderer = GetComponentInChildren<LineRenderer>();
         }
+
+        TMP_InputField[] fields = GetComponentsInChildren<TMP_InputField>();
+        if (!xField)
+        {
+            xField = fields.Single(f => f.transform.parent.name == "X");
+        }
+
+        if (!yField)
+        {
+            yField = fields.Single(f => f.transform.parent.name == "Y");
+        }
+
+        if (!radiusField)
+        {
+            radiusField = fields.Single(f => f.transform.parent.name == "Radius");
+        }
+    }
+
+    private void Start()
+    {
+        xField.text = circle.location.x.ToString();
+        xField.onEndEdit.AddListener(str =>
+        {
+            if (float.TryParse(str, out float x))
+            {
+                circle.location.x = x;
+            }
+            else
+            {
+                xField.text = circle.location.x.ToString();
+            }
+        });
+
+        yField.text = circle.location.y.ToString();
+        yField.onEndEdit.AddListener(str =>
+        {
+            if (float.TryParse(str, out float y))
+            {
+                circle.location.y = y;
+            }
+            else
+            {
+                yField.text = circle.location.y.ToString();
+            }
+        });
+
+        radiusField.text = circle.radius.ToString();
+        radiusField.onEndEdit.AddListener(str =>
+        {
+            if (float.TryParse(str, out float radius))
+            {
+                circle.radius = radius;
+            }
+            else
+            {
+                radiusField.text = circle.radius.ToString();
+            }
+        });
     }
 
     private void Update()
@@ -31,6 +97,19 @@ public class DrawCircle : MonoBehaviour
         {
             float radian = Mathf.PI * 2 * i / repeat;
             lineRenderer.SetPosition(i, new Vector2(Mathf.Cos(radian), Mathf.Sin(radian)) * circle.radius + circle.location);
+        }
+    }
+
+    public void SetLocateXByString(string str)
+    {
+        float currentValue = circle.location.x;
+        if (float.TryParse(str, out float x))
+        {
+            circle.location.x = x;
+        }
+        else
+        {
+            xField.text = currentValue.ToString();
         }
     }
 }
