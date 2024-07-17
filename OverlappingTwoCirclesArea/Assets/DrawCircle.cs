@@ -99,17 +99,4 @@ public class DrawCircle : MonoBehaviour
             lineRenderer.SetPosition(i, new Vector2(Mathf.Cos(radian), Mathf.Sin(radian)) * circle.radius + circle.location);
         }
     }
-
-    public void SetLocateXByString(string str)
-    {
-        float currentValue = circle.location.x;
-        if (float.TryParse(str, out float x))
-        {
-            circle.location.x = x;
-        }
-        else
-        {
-            xField.text = currentValue.ToString();
-        }
-    }
 }
