@@ -99,4 +99,22 @@ public class DrawCircle : MonoBehaviour
             lineRenderer.SetPosition(i, new Vector2(Mathf.Cos(radian), Mathf.Sin(radian)) * circle.radius + circle.location);
         }
     }
+
+    public void AddLocateX(float additional)
+    {
+        circle.location.x += additional;
+        xField.text = circle.location.x.ToString();
+    }
+
+    public void AddLocateY(float additional)
+    {
+        circle.location.y += additional;
+        yField.text = circle.location.y.ToString();
+    }
+
+    public void AddRadius(float additional)
+    {
+        circle.radius += additional;
+        radiusField.text = circle.radius.ToString();
+    }
 }

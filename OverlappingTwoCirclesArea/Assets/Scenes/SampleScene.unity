@@ -515,6 +515,7 @@ GameObject:
   - component: {fileID: 184249225}
   - component: {fileID: 184249227}
   - component: {fileID: 184249226}
+  - component: {fileID: 184249228}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -638,6 +639,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 184249224}
   m_CullTransparentMesh: 1
+--- !u!114 &184249228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184249224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04a59e0b58e39249a14be2e5e7c587c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onChangePosition:
+    m_PersistentCalls:
+      m_Calls: []
+  onChangePositionX:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 988234838}
+        m_TargetAssemblyTypeName: DrawCircle, Assembly-CSharp
+        m_MethodName: AddRadius
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onChangePositionY:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &259967325
 GameObject:
   m_ObjectHideFlags: 0
@@ -1886,6 +1920,7 @@ GameObject:
   - component: {fileID: 849757202}
   - component: {fileID: 849757204}
   - component: {fileID: 849757203}
+  - component: {fileID: 849757205}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2009,6 +2044,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 849757201}
   m_CullTransparentMesh: 1
+--- !u!114 &849757205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849757201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04a59e0b58e39249a14be2e5e7c587c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onChangePosition:
+    m_PersistentCalls:
+      m_Calls: []
+  onChangePositionX:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 441914304}
+        m_TargetAssemblyTypeName: DrawCircle, Assembly-CSharp
+        m_MethodName: AddRadius
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onChangePositionY:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &876015818
 GameObject:
   m_ObjectHideFlags: 0
@@ -2606,6 +2674,7 @@ GameObject:
   - component: {fileID: 1029483842}
   - component: {fileID: 1029483844}
   - component: {fileID: 1029483843}
+  - component: {fileID: 1029483845}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2729,6 +2798,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1029483841}
   m_CullTransparentMesh: 1
+--- !u!114 &1029483845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029483841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04a59e0b58e39249a14be2e5e7c587c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onChangePosition:
+    m_PersistentCalls:
+      m_Calls: []
+  onChangePositionX:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 988234838}
+        m_TargetAssemblyTypeName: DrawCircle, Assembly-CSharp
+        m_MethodName: AddLocateX
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onChangePositionY:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1225178474
 GameObject:
   m_ObjectHideFlags: 0
@@ -3070,6 +3172,7 @@ GameObject:
   - component: {fileID: 1390028479}
   - component: {fileID: 1390028481}
   - component: {fileID: 1390028480}
+  - component: {fileID: 1390028482}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -3193,6 +3296,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1390028478}
   m_CullTransparentMesh: 1
+--- !u!114 &1390028482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390028478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04a59e0b58e39249a14be2e5e7c587c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onChangePosition:
+    m_PersistentCalls:
+      m_Calls: []
+  onChangePositionX:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 441914304}
+        m_TargetAssemblyTypeName: DrawCircle, Assembly-CSharp
+        m_MethodName: AddLocateX
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onChangePositionY:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1407880521
 GameObject:
   m_ObjectHideFlags: 0
@@ -3998,6 +4134,7 @@ GameObject:
   - component: {fileID: 1557442141}
   - component: {fileID: 1557442143}
   - component: {fileID: 1557442142}
+  - component: {fileID: 1557442144}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -4121,6 +4258,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1557442140}
   m_CullTransparentMesh: 1
+--- !u!114 &1557442144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557442140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04a59e0b58e39249a14be2e5e7c587c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onChangePosition:
+    m_PersistentCalls:
+      m_Calls: []
+  onChangePositionX:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 441914304}
+        m_TargetAssemblyTypeName: DrawCircle, Assembly-CSharp
+        m_MethodName: AddLocateY
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onChangePositionY:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1567801404
 GameObject:
   m_ObjectHideFlags: 0
@@ -4405,6 +4575,7 @@ GameObject:
   - component: {fileID: 1730451752}
   - component: {fileID: 1730451754}
   - component: {fileID: 1730451753}
+  - component: {fileID: 1730451755}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -4528,6 +4699,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1730451751}
   m_CullTransparentMesh: 1
+--- !u!114 &1730451755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730451751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04a59e0b58e39249a14be2e5e7c587c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onChangePosition:
+    m_PersistentCalls:
+      m_Calls: []
+  onChangePositionX:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 988234838}
+        m_TargetAssemblyTypeName: DrawCircle, Assembly-CSharp
+        m_MethodName: AddLocateY
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onChangePositionY:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1846363232
 GameObject:
   m_ObjectHideFlags: 0
