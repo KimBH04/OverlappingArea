@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
+using System.Linq;
 
 public class Calculator : MonoBehaviour
 {
@@ -10,14 +11,28 @@ public class Calculator : MonoBehaviour
     [Header("Draw")]
     public LineRenderer lineRenderer;
     [Range(0, 360)] public int repeat = 36;
+    public bool outLine = true;
 
     private void Update()
     {
         display.text = GetOverlappingAreaSize(circles[0].circle, circles[1].circle, out float radian1, out float radian2).ToString();
 
         Vector3[] result = GetDrawCorners(circles[0].circle, circles[1].circle, radian1, radian2, repeat);
-        lineRenderer.positionCount = result.Length;
-        lineRenderer.SetPositions(result);
+        Vector3[] cross = result.ToArray();
+
+        int len = result.Length;
+        if (!outLine)
+        {
+            for (int i = len / 2; i > 0; i--)
+            {
+                int index = i * 2;
+                cross[index - 2] = result[i - 1];
+                cross[index - 1] = result[^i];
+            }
+        }
+
+        lineRenderer.positionCount = len;
+        lineRenderer.SetPositions(cross);
     }
 
     private static Vector3[] GetDrawCorners(Circle lhs, Circle rhs, float lhsRadian, float rhsRadian, int repeat)
