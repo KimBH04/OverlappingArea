@@ -81,7 +81,7 @@ public class DrawCircle : MonoBehaviour
         {
             if (float.TryParse(str, out float radius))
             {
-                circle.radius = radius;
+                circle.radius = Mathf.Max(radius, 0f);
             }
             else
             {
@@ -114,7 +114,7 @@ public class DrawCircle : MonoBehaviour
 
     public void AddRadius(float additional)
     {
-        circle.radius += additional;
+        circle.radius = Mathf.Max(circle.radius + additional, 0f);
         radiusField.text = circle.radius.ToString();
     }
 }
