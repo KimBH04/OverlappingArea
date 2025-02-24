@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
@@ -23,6 +24,9 @@ public class DrawCircle : MonoBehaviour
     public TMP_InputField xField;
     public TMP_InputField yField;
     public TMP_InputField radiusField;
+
+    public MeshFilter filter;
+    private int[] triangles;
 
     private void Awake()
     {
@@ -93,11 +97,28 @@ public class DrawCircle : MonoBehaviour
     private void Update()
     {
         lineRenderer.positionCount = repeat;
+
+        List<Vector3> ls = new();
         for (int i = 0; i < repeat; i++)
         {
             float radian = Mathf.PI * 2 * i / repeat;
-            lineRenderer.SetPosition(i, new Vector2(Mathf.Cos(radian), Mathf.Sin(radian)) * circle.radius + circle.location);
+            Vector3 vertex = new Vector2(Mathf.Cos(radian), Mathf.Sin(radian)) * circle.radius + circle.location;
+            lineRenderer.SetPosition(i, vertex);
+            ls.Add(vertex);
         }
+
+        int n = repeat - 2;
+        triangles = new int[n * 3];
+        for (int i = 0; i < n; i++)
+        {
+            int idx = i * 3;
+            triangles[idx] = 0;
+            triangles[idx + 1] = i + 1;
+            triangles[idx + 2] = i + 2;
+        }
+
+        filter.mesh.SetVertices(ls.ToArray(), 0, repeat);
+        filter.mesh.SetTriangles(triangles, 0);
     }
 
     public void AddLocateX(float additional)
