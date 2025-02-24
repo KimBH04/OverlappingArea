@@ -1196,7 +1196,6 @@ MonoBehaviour:
   - {fileID: 441914304}
   lineRenderer: {fileID: 2036227764}
   repeat: 36
-  outLine: 1
 --- !u!4 &482543631
 Transform:
   m_ObjectHideFlags: 0
